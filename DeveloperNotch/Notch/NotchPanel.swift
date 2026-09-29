@@ -57,7 +57,6 @@ final class NotchPanel: NSPanel {
     /// Replaces the panel's content with a SwiftUI view hierarchy.
     func setSwiftUIContent<V: View>(_ view: V) {
         let host = NSHostingView(rootView: view)
-        host.frame = bounds
         host.autoresizingMask = [.width, .height]
         contentView = host
     }
